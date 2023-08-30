@@ -3,7 +3,7 @@
 Display Configuration
 - https://github.com/teeminus/NoTouchScreenFirmware/wiki/Klipper-display-configuration
 
-```
+```toml
 [display]
 lcd_type: emulated_st7920
 en_pin: EXP1_7
@@ -17,7 +17,7 @@ click_pin: ^!EXP1_2
 Pin reference
 - https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0/Hardware/BTT%20SKR%20MINI%20E3%20V2.0-PIN.pdf
 
-```
+```toml
 [stepper_z]
 step_pin: PB0
 dir_pin: PC5
@@ -28,10 +28,11 @@ endstop_pin: probe:z_virtual_endstop
 position_max: 250
 ```
 
-```
+```toml
 [bltouch]
 sensor_pin: ^PC14
 control_pin: PA1
+# stow_on_each_sample: false
 z_offset: 0
 
 [safe_z_home]
